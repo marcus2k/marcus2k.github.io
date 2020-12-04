@@ -1,0 +1,135 @@
+body, html{
+    margin:0;
+    padding:0;
+    height: 100%;
+    overflow: auto; /* overflow: hidden; prevents scrolling completely if used alone */
+    overscroll-behavior: contain;
+    user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* use align-self for specific item */
+    height: 100vh;
+    width: 100vw;
+}
+
+.center {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-dark {
+    background-color: black;
+    color: white;
+}
+
+#profilephoto {
+    height: auto;
+    width: 90%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    pointer-events: none;
+}
+
+.bigger, .smaller {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 4% 5% 4%;
+    justify-content: center;
+}
+
+.bigger {
+    width: 67%;
+    flex: 3 3 500px; /* flex: grow shrink basis */
+}
+
+.smaller{
+    width: 33%;
+    flex: 1 1 200px; /* flex: grow shrink basis */
+    text-align: center;
+}
+
+.logo {
+    width: 90%;
+    height: auto;
+    pointer-events: none;
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subheading {
+    margin-right:0;
+    padding-right:0;
+}
+
+p {
+    text-align: center;
+    font-family: monospace;
+    font-size: xx-large;
+}
+
+.jd {
+    font-size:large;
+    text-align:left;
+}
+
+.link:hover {
+    color: darkblue;
+}
+
+.link {
+    color:inherit;
+}
+
+.link-dark:hover {
+    color: cyan;
+}
+
+.project {
+    padding:0;
+    margin:0;
+}
+
+
+@media (max-width: 900px) {
+    #profilephoto {
+        height: 50vh;
+        width: auto;
+    }
+
+    .bigger, .smaller {
+        padding: 5% 5% 5% 5%;
+    }
+
+    .subheading {
+        height: 1em;
+        width: auto;
+        align-self: left;
+    }
+
+    .container {
+        height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        width: 70vw;
+        height: auto;
+    }
+
+    h1 {
+        font-size: auto;
+    }
+}
