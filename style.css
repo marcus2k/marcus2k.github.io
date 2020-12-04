@@ -102,7 +102,7 @@ p {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 9.94in) {
     #profilephoto {
         height: 50vh;
         width: auto;
@@ -123,7 +123,7 @@ p {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 5.52in) {
     .logo {
         width: 70vw;
         height: auto;
