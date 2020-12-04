@@ -82,6 +82,7 @@ p {
 .jd {
     font-size:large;
     text-align:left;
+    font-family: monospace;
 }
 
 .link:hover {
