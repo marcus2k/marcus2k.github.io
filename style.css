@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .center {
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -45,8 +45,8 @@ h1, h2, h3, h4, h5, h6 {
 .bigger, .smaller {
     display: flex;
     flex-wrap: wrap;
-    padding: 5% 4% 5% 4%;
-    justify-content: center;
+    /*padding: 5% 4% 5% 4%;*/
+    justify-content: space-around;
 }
 
 .bigger {
@@ -115,7 +115,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
-    height: 50%;
+    height: auto;
     justify-content: center;
     align-items: left;
 }
@@ -126,7 +126,83 @@ p {
     margin: auto;
 }
 
+@media (min-width: 9.95in) {
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.25);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes twinkle {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.7;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .arrow-up {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid white;
+        margin: auto;
+        animation: heartbeat 1s ease-in-out 0.3s;
+        animation-iteration-count: infinite;
+        position: absolute;
+        top: 7px;
+        left: 50%;
+        right: 50%;
+    }
+
+    .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid white;
+        margin: auto;
+        animation: heartbeat 1s ease-in-out 0.3s;
+        animation-iteration-count: infinite;
+        position: absolute;
+        bottom: 7px;
+        left: 50%;
+        right: 50%
+    }
+
+    .down-black {
+        border-top: 20px solid black;
+    }
+    .up-black {
+        border-bottom: 20px solid black;
+    }
+    
+    .button-zone {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 16px 0px 7px 0px;
+        align-self: stretch;
+    }
+}
+
 @media (max-width: 9.94in) {
+    .button-zone {
+        display: none;
+    }
+
     #profilephoto {
         height: 50vh;
         width: auto;
