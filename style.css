@@ -1,8 +1,9 @@
 body, html{
+    scroll-behavior: smooth !important;
     margin:0;
     padding:0;
     height: 100%;
-    overflow: auto; /* overflow: hidden; prevents scrolling completely if used alone */
+    /*overflow: auto;  /*overflow: hidden; prevents scrolling completely if used alone */
     overscroll-behavior: contain;
     user-select: none;
 }
@@ -127,6 +128,9 @@ p {
 }
 
 @media (min-width: 9.95in) {
+    html {
+        overflow: hidden !important;
+    }
     @keyframes heartbeat {
         0% {
             transform: scale(1);
