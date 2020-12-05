@@ -7,6 +7,46 @@
     <!-- For future use: Progress Bars
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
     <style>
+        /* For outlining
+        div {
+            outline: 5px dotted green;
+        }*/
+        .soc {
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+        .logobox, .descbox {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            height: 50%;
+            justify-content: center;
+            align-items: left;
+        }
+        .text {
+            text-align: center; 
+            display: inline-block;
+            margin: auto;
+        }
+        @media (max-width: 5.75in) {
+            .soc {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .logobox, .descbox {
+                width: 260px;
+                height: auto;
+                margin-top: 10%;
+                justify-content: center;
+            }
+            .descbox {
+                text-align: center;
+            }
+            .company {
+                width: 80vw;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -26,38 +66,37 @@
                 My Experience
             </h1>
         </div>
-        <div class="bigger center">
-            <div class="smaller center">
-                <div>
-                    <a style="text-decoration:none;" target="_blank" href="https://www.paypal.com/">
-                        <img class="logo" src="assets/img/logo/paypal.png" alt="PayPal logo">
-                    </a>
+        <div class="bigger">
+            <div class="logobox center company">
+                <a style="text-decoration:none;" target="_blank" href="https://www.paypal.com/">
+                    <img class="logo" src="assets/img/logo/paypal.png" alt="PayPal logo">
+                </a>
+            </div>
+            <div class="descbox">
+                <div class="text">
                     <h2>
-                        Software Engineering Intern
+                        Software Engineering Intern<br>
                     </h2>
                     <h3>
-                        (January 2021 -)
+                        (January 2021 -)<br>
                     </h3>
                     <p class="jd">
                         Backend Software Engineer Intern at PayPal's Payments Team
-                        <br> <!--More description here-->
-                        <br> <!--More description here-->
-                        <br> <!--More description here-->
-                        <br> <!--More description here-->
-                        &nbsp<!--More description here-->
                     </p>
                 </div>
             </div>
-            <div class="smaller center">
-                <div>
-                    <a style="text-decoration:none;" target="_blank" href="https://www.comp.nus.edu.sg/">
-                        <img class="logo" src="assets/img/logo/soc-blue.png" alt="National University of Singapore School of Computing logo">
-                    </a>
+            <div class="logobox center company soc">
+                <a style="text-decoration:none;" target="_blank" href="https://www.comp.nus.edu.sg/">
+                    <img class="logo" src="assets/img/logo/soc-blue.png" alt="National University of Singapore School of Computing logo">
+                </a>
+            </div>
+            <div class="descbox soc">
+                <div class="text">
                     <h2>
-                        Teaching Assistant
+                        Teaching Assistant<br>
                     </h2>
                     <h3>
-                        (August - December 2020)
+                        (August - December 2020)<br>
                     </h3>
                     <p class="jd">
                         Modules taught:
